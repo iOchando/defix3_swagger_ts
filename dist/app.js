@@ -12,6 +12,7 @@ const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 app.use(express_1.default.json());
 // app.use("/",router);
+app.use(express_1.default.static(process.cwd() + '/dist'));
 app.use("/swagger", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_1.default));
 app.listen((PORT), () => {
     console.log(`Ready http://localhost:${PORT}`);
