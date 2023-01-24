@@ -10,5 +10,5 @@ app.use(express.json());
 app.use("/swagger",swaggerUi.serve, swaggerUi.setup(swaggerSetup))
 
 app.listen((PORT), () => {
-    console.log(`Listo por la ruta http://localhost:${PORT}`)
+    console.log(`Ready http://localhost:${PORT}`)
 })
